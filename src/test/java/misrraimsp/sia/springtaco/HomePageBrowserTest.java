@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest(webEnvironment= WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
 public class HomePageBrowserTest {
 
   @LocalServerPort
@@ -22,7 +22,9 @@ public class HomePageBrowserTest {
   @BeforeAll
   public static void setup() {
     browser = new HtmlUnitDriver();
-    browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    
+    browser.manage().timeouts()
+          .implicitlyWait(10, TimeUnit.SECONDS);
   }
   
   @AfterAll
@@ -41,8 +43,10 @@ public class HomePageBrowserTest {
     String h1Text = browser.findElementByTagName("h1").getText();
     assertEquals("Welcome to...", h1Text);
     
-    String imgSrc = browser.findElementByTagName("img").getAttribute("src");
+    String imgSrc = browser.findElementByTagName("img")
+                                              .getAttribute("src");
     assertEquals(homePage + "/images/TacoCloud.png", imgSrc);
   }
-
+  
+  
 }
