@@ -16,7 +16,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.2.RELEASE</version> <!-- Sticking with 2.0.0.RELEASE for now. Problem with GeneratedKeyHolder in 2.0.1.RELEASE and higher. -->
+    <version>2.2.1.RELEASE</version> <!-- Sticking with 2.0.0.RELEASE for now. Problem with GeneratedKeyHolder in 2.0.1.RELEASE and higher. -->
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
@@ -36,6 +36,11 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
     <dependency>
@@ -73,25 +78,11 @@
     	<scope>provided</scope>
     </dependency>
 
-<!-- 	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter</artifactId>
-	</dependency>
- -->
-
-<!-- tag::jdbcStarter[] -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-jdbc</artifactId>
-	</dependency>
-<!-- end::jdbcStarter[] -->
-<!-- tag::h2database[] -->
 	<dependency>
 		<groupId>com.h2database</groupId>
 		<artifactId>h2</artifactId>
 		<scope>runtime</scope>
 	</dependency>
-<!-- end::h2database[] -->
   </dependencies>
 
   <build>
