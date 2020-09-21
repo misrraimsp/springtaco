@@ -6,6 +6,7 @@ Just a place where you can order tacos online - Craig Walls's Spring in Action (
 ## Technologies
 Project is created with:
 * Java
+* IntelliJ IDEA
 * Spring Boot
 * Spring Web MVC
 * Spring Data JPA
